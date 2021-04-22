@@ -41,6 +41,7 @@ app.get('/cookie', (req, res, next) => {
     // expires: new Date(new Date().getTime() + 14 * 86400000),
     // 通过maxAge设置Cookie过期时间为14天后
     maxAge: 14 * 86400000,
+    // sameSite: 'Strict'
   })
 
   // 读取cookieParser解析的Cookie
@@ -64,5 +65,5 @@ app.post('/data',  function (req, res) {
 
 
 app.listen(3000, () => {
-  console.log('Server is running on http://localhost:8080')
+  console.log('Server is running on http://localhost:3000')
 })
